@@ -1,4 +1,5 @@
 from os import system, name
+import random
 def clear():
     if name == 'nt':
         _ = system('cls')
@@ -6,19 +7,21 @@ def clear():
         _ = system('clear')
 
 def powerrr():
-    x=int(input("Type in a base\n"))
-    y=int(input("Now type in exponent\n"))
-
     def pow(x,y):
         a=1
         b=1
         while a<y:
             if a==1:
                 b=x
-                x=x*b
-                a+=1
+            x=x*b
+            a+=1
         return x
-    print("\n"+str(x)+" to the power of "+str(y)+" equals " +str(pow(x,y)))
+    x=int(input("Type in a base\n"))
+    y=int(input("Now type in exponent\n"))
+    print(str(x)+" to the power of "+str(y)+" equals " +str(pow(x,y)))
+
+
+
 
 def yorn(quest):
     answer = str(input(quest+" (y/n)")).lower().strip()
@@ -39,6 +42,15 @@ def avge():
         summ+=provnum
     finalavg = float(summ/numofnum)
     print("The average of numbers in your set equals "+ str(finalavg))
+def ranndom():
+    x=int(input("Type in X\n"))
+    y=int(input("Now type Y\n"))
+    if x>y:
+        rndm=random.randint(y,x)
+    else:
+        rndm=random.randint(x,y)
+    print("Congrats!!! You rolled "+ str(rndm))
+
 
 
 

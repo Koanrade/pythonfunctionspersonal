@@ -9,8 +9,8 @@ def returnto():
         main()
 def main():
     functionsss.clear()
-    print("1.Power\n2.Count the average\n3.Generate a random number from X to Y")
-    pick=int(input("Pick an action:"))
+    print("1.Power\n2.Count the average\n3.Generate a random number from X to Y\n4.Exit")
+    pick=int(input("Pick an action: "))
     if pick==1:
         functionsss.clear()
         quest="Are you sure?"
@@ -25,6 +25,7 @@ def main():
         functionsss.clear()
         quest="Are you sure?"
         if functionsss.yorn(quest) == True:
+            functionsss.clear()
             functionsss.avge()
             returnto()
         else:
@@ -34,11 +35,15 @@ def main():
         functionsss.clear()
         quest="Are you sure?"
         if functionsss.yorn(quest) == True:
-            functionsss.powerrr()
+            functionsss.clear()
+            functionsss.ranndom()
             returnto()
         else:
             functionsss.clear()
             main()
+    if pick==4:
+        functionsss.clear()
+        exit()
     else:
         functionsss.clear()
         print("Wrong action number\n Try again")
