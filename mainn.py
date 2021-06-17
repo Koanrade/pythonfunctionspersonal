@@ -9,7 +9,7 @@ def returnto():
         main()
 def main():
     functionsss.clear()
-    print("1.Power\n2.Count the average\n3.Generate a random number from X to Y\n4.Exit")
+    print("1.Power\n2.Count the average\n3.Generate a random number from X to Y\n4.Fibonacci list generator\n5.Exit")
     pick=int(input("Pick an action: "))
     if pick==1:
         functionsss.clear()
@@ -42,6 +42,16 @@ def main():
             functionsss.clear()
             main()
     if pick==4:
+        functionsss.clear()
+        quest="Are you sure?"
+        if functionsss.yorn(quest) == True:
+            functionsss.clear()
+            functionsss.genfib()
+            returnto()
+        else:
+            functionsss.clear()
+            main()
+    if pick==5:
         functionsss.clear()
         exit()
     else:

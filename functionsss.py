@@ -50,8 +50,32 @@ def ranndom():
     else:
         rndm=random.randint(x,y)
     print("Congrats!!! You rolled "+ str(rndm))
+def genfib():
+    finumprov = int(input("How many fibonnacci numbers you wish to display?"))
+    new=finumprov
+    if finumprov%2!=0:
+        finumprov+=1
+    i=0
+    a=0
+    b=1
+    n=1
+    cf=0
+    fl=[]
+    while i<finumprov/2:
+
+        buffa=a #0 0    1 1    2 3    3 8    4 21   5 55
+        buffb=b #0 1    1 2    2 5    3 13   4 34   5 89
+        cf=a+b # 0 1   1 3
+        a=a+b # 0 1   1 3
+        b=b+cf # 0 2   1 59
+        i+=1
+        fl.append(buffa)
+        fl.append(buffb)
+    j=0
+    while j<new:
+        print("F_"+str(j)+" == "+str(fl[j]))
 
 
 
-
+        j+=1
 
